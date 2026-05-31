@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tasyakuran Aqiqah Syifana Aulia Putri</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#eef6ff;color:#333}
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#4a90e2;color:#fff;text-align:center;padding:20px}
+.btn{background:#fff;color:#4a90e2;padding:12px 24px;border-radius:30px;text-decoration:none}
+.section{padding:40px 20px;max-width:900px;margin:auto;text-align:center}
+.card{background:#fff;padding:20px;border-radius:15px;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+.gallery img{width:100%;max-width:250px;margin:10px;border-radius:10px}
+</style>
+</head>
+<body>
+<div class="hero">
+<p>Kepada Yth.</p>
+<h2 id="guestName">Bapak/Ibu/Saudara/i</h2>
+<h1>Tasyakuran Aqiqah</h1>
+<h2>Syifana Aulia Putri</h2>
+<a class="btn" href="#acara">Buka Undangan</a>
+</div>
+
+<div class="section">
+<div class="card">
+<h2>Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
+<p>Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara Tasyakuran Aqiqah putri kami.</p>
+<h1>Syifana Aulia Putri</h1>
+<p>Putri dari Agustino & Darse Damanik</p>
+</div>
+</div>
+
+<div class="section" id="acara">
+<div class="card">
+<h2>Detail Acara</h2>
+<p><b>Senin, 15 Juni 2026</b></p>
+<p>10.00 WIB s/d Selesai</p>
+<p>Sidomulyo - Bagan Batu</p>
+<p>WhatsApp Konfirmasi: 085362755498</p>
+</div>
+</div>
+
+<script>
+const params=new URLSearchParams(window.location.search);
+document.getElementById('guestName').innerText=params.get('to')||'Bapak/Ibu/Saudara/i';
+</script>
+</body>
+</html>
