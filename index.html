@@ -1,94 +1,183 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tasyakuran Aqiqah Syifana Aulia Putri</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Poppins,sans-serif;background:#eef5ff;color:#333}
-.hero{height:100vh;background:linear-gradient(rgba(0,40,90,.55),rgba(0,40,90,.55)),url('cover.jpg') center/cover;display:flex;justify-content:center;align-items:center;text-align:center;color:#fff;padding:20px}
-.hero h1{font-family:'Great Vibes';font-size:4rem}
-.btn{display:inline-block;background:#4a90e2;color:#fff;padding:14px 28px;border-radius:30px;text-decoration:none;margin-top:20px}
-.section{padding:70px 20px;max-width:1100px;margin:auto;text-align:center}
-.card{background:#fff;padding:25px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.08)}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;margin-top:20px}
-.gallery img{width:100%;height:320px;object-fit:cover;border-radius:15px}
-.count{display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
-.box{background:#4a90e2;color:#fff;padding:15px;border-radius:15px;min-width:90px}
-.box span{font-size:2rem;font-weight:bold;display:block}
-footer{background:#4a90e2;color:#fff;text-align:center;padding:30px}
-.music{position:fixed;right:20px;bottom:20px;border:none;border-radius:50%;width:60px;height:60px}
+body{
+font-family:'Poppins',sans-serif;
+background:#f5f9ff;
+color:#333;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,30,70,.55),rgba(0,30,70,.55)),
+url('cover.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero-content{
+max-width:700px;
+}
+
+.hero h1{
+font-family:'Great Vibes',cursive;
+font-size:5rem;
+margin-bottom:10px;
+}
+
+.hero h2{
+font-size:1.8rem;
+margin-bottom:15px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#4a90e2;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
+margin-top:20px;
+}
+
+.section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+text-align:center;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+margin-top:30px;
+}
+
+.gallery img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:15px;
+}
+
+.music-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+border:none;
+border-radius:50%;
+background:#4a90e2;
+color:white;
+font-size:22px;
+cursor:pointer;
+z-index:999;
+}
 </style>
+
 </head>
+
 <body>
-<audio id="bgm" autoplay loop><source src="instumen islami.mp3"></audio>
-<button class="music" onclick="toggleMusic()">🎵</button>
+
+<audio id="bgm" autoplay loop>
+<source src="instumen islami.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
 
 <section class="hero">
-<div>
+<div class="hero-content">
+
 <p>Kepada Yth.</p>
 <h2 id="guestName">Bapak/Ibu/Saudara/i</h2>
-<h1>Tasyakuran Aqiqah</h1>
-<h2>Syifana Aulia Putri</h2>
-<a href="#acara" class="btn">Buka Undangan</a>
-</div>
-</section>
 
-<section class="section">
-<div class="card">
-<h2>Assalamu'alaikum Warahmatullahi Wabarakatuh</h2><br>
-<p>Dengan memohon rahmat dan ridho Allah SWT kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara Tasyakuran Aqiqah putri kami.</p>
-<h1 style="font-family:Great Vibes;color:#4a90e2;margin:15px 0">Syifana Aulia Putri</h1>
-<p>Putri dari Agustino & Darse Damanik</p>
+<h1>Syifana Aulia Putri</h1>
+
+<p>Tasyakuran Aqiqah</p>
+
+<a href="#acara" class="btn">Buka Undangan</a>
+
 </div>
 </section>
 
 <section class="section" id="acara">
-<h2>Menuju Hari Acara</h2><br>
-<div class="count">
-<div class="box"><span id="d">0</span>Hari</div>
-<div class="box"><span id="h">0</span>Jam</div>
-<div class="box"><span id="m">0</span>Menit</div>
-<div class="box"><span id="s">0</span>Detik</div>
-</div>
-</section>
-
-<section class="section">
 <div class="card">
-<h2>Detail Acara</h2><br>
-<p><b>Senin, 15 Juni 2026</b></p>
-<p>10.00 WIB s/d Selesai</p>
-<p>Sidomulyo - Bagan Batu</p><br>
-<a class="btn" href="https://wa.me/6285362755498?text=Saya%20akan%20hadir%20di%20Aqiqah%20Syifana">Konfirmasi WhatsApp</a>
+<h2>Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
+<br>
+<p>
+Dengan memohon rahmat dan ridho Allah SWT,
+kami mengundang Bapak/Ibu/Saudara/i
+untuk hadir dalam acara Tasyakuran Aqiqah putri kami.
+</p>
+
+<br>
+
+<h2 style="font-family:Great Vibes;font-size:50px;color:#4a90e2">
+Syifana Aulia Putri
+</h2>
+
+<p>Putri dari</p>
+<b>Agustino & Darse Damanik</b>
+
 </div>
 </section>
 
 <section class="section">
 <h2>Galeri Keluarga</h2>
+
 <div class="gallery">
-<img src="foto1.jpg"><img src="foto2.jpg"><img src="foto3.jpg">
-<img src="foto4.jpg"><img src="foto5.jpg"><img src="foto6.jpg">
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+<img src="foto4.jpg">
+<img src="foto5.jpg">
+<img src="foto6.jpg">
+<img src="foto7.jpg">
 </div>
+
 </section>
 
-<footer>
-<h3>Terima Kasih Atas Doa dan Kehadirannya</h3>
-<p>Agustino & Darse Damanik</p>
-</footer>
-
 <script>
-const p=new URLSearchParams(location.search);
-document.getElementById('guestName').innerText=p.get('to')||'Bapak/Ibu/Saudara/i';
-const target=new Date('2026-06-15T10:00:00').getTime();
-setInterval(()=>{
-let n=new Date().getTime(),x=target-n;
-document.getElementById('d').innerHTML=Math.floor(x/86400000);
-document.getElementById('h').innerHTML=Math.floor((x%86400000)/3600000);
-document.getElementById('m').innerHTML=Math.floor((x%3600000)/60000);
-document.getElementById('s').innerHTML=Math.floor((x%60000)/1000);
-},1000);
-function toggleMusic(){let a=document.getElementById('bgm');a.paused?a.play():a.pause();}
+const params = new URLSearchParams(window.location.search);
+document.getElementById('guestName').innerText =
+params.get('to') || 'Bapak/Ibu/Saudara/i';
+
+function toggleMusic(){
+const bgm=document.getElementById('bgm');
+if(bgm.paused){
+bgm.play();
+}else{
+bgm.pause();
+}
+}
 </script>
-</body></html>
+
+</body>
+</html>
